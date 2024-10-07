@@ -5,8 +5,7 @@ on:
   push:
     branches:
     - main
-    paths:
-    - jenkins-terraform-slave
+
     
 jobs:
 
