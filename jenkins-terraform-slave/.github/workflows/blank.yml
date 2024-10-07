@@ -3,14 +3,15 @@ name: Build and push Docker image to dockerhub
 
 on:
   push:
-    branches: [ "main" ]
+    paths:
+      - 'jenkins-terraform-slave/**'
     
 jobs:
 
   build:
 
     runs-on: ubuntu-latest
-    working-directory: ./jenkins-terraform-slave
+    working-directory: jenkins-terraform-slave
 
     steps:
     - name: Check out the repo
