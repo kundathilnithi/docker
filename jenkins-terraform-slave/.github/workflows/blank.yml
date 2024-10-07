@@ -3,8 +3,10 @@ name: Build and push Docker image to dockerhub
 
 on:
   push:
+    branches:
+    - main
     paths:
-      - 'jenkins-terraform-slave/**'
+    - jenkins-terraform-slave
     
 jobs:
 
