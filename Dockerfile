@@ -9,7 +9,7 @@ RUN apk add --update make git curl curl-dev openssh wget && \
     sha256sum -cs terraform_${TERRAFORM_VERSION}_SHA256SUMS && \
     unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /bin && \
     rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip
-RUN wget https://github.com/gruntwork-io/terragrunt/releases/download/v0.68.1/terragrunt_linux_amd64 
-RUN mv  terragrunt_linux_amd64 terragrunt
+RUN wget  https://github.com/gruntwork-io/terragrunt/releases/download/v0.68.1/terragrunt_linux_amd64 -P /bin
+RUN mv  /bin/terragrunt_linux_amd64 /bin/terragrunt
 RUN chmod u+x  terragrunt
-RUN mv terragrunt /bin
+
